@@ -1,0 +1,16 @@
+---
+## docker-compose for building and running KAMERA-variant of VIAME
+## This pulls from .env file, as well as any environment variables8
+
+version: '3'
+services:
+  viame:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        BASE_IMAGE: "${BASE_IMAGE}"
+
+    image: prefrontalvortex/itk:latest
+
+...
